@@ -1,0 +1,23 @@
+{
+  "name": "samwaters/pidmanager",
+  "description": "PID Manager for PHP",
+  "version": "1.0.0",
+  "keywords": ["pid", "file", "php"],
+  "homepage": "http://www.samwaters.com",
+  "license": "DBAD",
+  "authors": [
+    {
+      "name": "Sam Waters",
+      "email": "sam@samwaters.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "PidManager": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
