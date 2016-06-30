@@ -10,9 +10,9 @@ class StaticPidManager
   /** @var PidManager $_pidManager */
   private static $_pidManager;
   
-  public static function create($pidFile, $callingScript, $instanceId = null)
+  public static function create($pidFile, $lockType, $callingScript, $instanceId = null)
   {
-    self::$_pidManager = new PidManager($pidFile, $callingScript, $instanceId);
+    self::$_pidManager = new PidManager($pidFile, $lockType, $callingScript, $instanceId);
   }
 
   /**

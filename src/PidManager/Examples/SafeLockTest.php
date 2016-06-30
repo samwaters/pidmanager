@@ -8,14 +8,16 @@
  * If another instance is already running with the same instance id, an exception will be thrown
  */
 use PidManager\PidManager;
+use PidManager\Enums\LockType;
+
 include_once("../../../vendor/autoload.php");
 
 if(!isset($argv[1]))
 {
-  echo "Usage: InstanceUsage.php <instance_id>\n";
+  echo "Usage: SafeLockTest.php <instance_id>\n";
   exit;
 }
-$pidManager = new PidManager("/tmp/InstanceUsage-" . $argv[1] . ".pid", basename(__FILE__), $argv[1]);
+$pidManager = new PidManager("/tmp/InstanceUsage-" . $argv[1] . ".pid", LockType::SAFE, basename(__FILE__), $argv[1]);
 echo "Running as instance " . $argv[1] . "\n";
 while(true)
 {

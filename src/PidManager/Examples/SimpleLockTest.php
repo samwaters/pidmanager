@@ -8,9 +8,10 @@
  * If another instance is already running, an exception will be thrown
  */
 use PidManager\PidManager;
+use PidManager\Enums\LockType;
 include_once("../../../vendor/autoload.php");
 
-$pidManager = new PidManager("/tmp/test.pid", basename(__FILE__));
+$pidManager = new PidManager("/tmp/test.pid", LockType::SIMPLE);
 echo "Running SimpleUsage test\n";
 while(true)
 {
