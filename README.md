@@ -11,7 +11,7 @@ This project aims to provide a simple, easy to use, drop in manager for PID file
 It also aims to be extensible, so adding new locking methods is straight forward.
 
 ## Locking Methods
-### Simple Lock using `flock`
+### Simple Lock
 This approach uses file level locking of the PID file to make sure that only one process can use it at any given time.  
 If a second instance tries to start and lock the same file, it will fail and the script can assume another instance is already running.  
 However, if the process crashes or the machine reboots unexpectedly, file locks may not be released.
