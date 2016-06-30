@@ -29,6 +29,6 @@ class SimpleLock extends BaseLock
   {
     fflush($this->_pidFileHandle);
     flock($this->_pidFileHandle, LOCK_UN);
-    fclose($this->_pidFile);
+    fclose($this->_pidFileHandle);
   }
 }
