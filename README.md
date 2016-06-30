@@ -33,7 +33,7 @@ If the existing process matches the current script, a `ProcessAlreadyRunningExce
 `$pidManager = new PidManager("/tmp/test-inst1.pid", LockType::SAFE, basename(__FILE__), "inst1");`
 This will create a PidManager using the PID file `/tmp/test-inst1.pid`, and write the current PID to it.
 If another instance tries to start, this file will be read and the PidManager will check to see if that process is still running, and whether it's the same script.
-If it matches, a `ProcessAlreadyRunningException` will be thrown.
+  If it matches, a `ProcessAlreadyRunningException` will be thrown.
  
 See `Examples/SafeLockTest.php` for a code example
 
